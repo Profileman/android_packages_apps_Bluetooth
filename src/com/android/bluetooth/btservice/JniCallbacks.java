@@ -59,8 +59,8 @@ final class JniCallbacks {
         mRemoteDevices.deviceFoundCallback(address);
     }
 
-    void pinRequestCallback(byte[] address, byte[] name, int cod, boolean secure) {
-        mRemoteDevices.pinRequestCallback(address, name, cod, secure);
+    void pinRequestCallback(byte[] address, byte[] name, int cod) { //, boolean secure) {
+        mRemoteDevices.pinRequestCallback(address, name, cod, false); //secure);
     }
 
     void bondStateChangeCallback(int status, byte[] address, int newState) {

@@ -922,7 +922,8 @@ public class GattService extends ProfileService {
         }
     }
 
-    void onAdvertiseCallback(int status, int clientIf) throws RemoteException {
+    //void onAdvertiseCallback(int status, int clientIf) throws RemoteException {
+    void onClientListen(int status, int clientIf) throws RemoteException {
         if (DBG) Log.d(TAG, "onClientListen() status=" + status);
         synchronized (mLock) {
             if (DBG) Log.d(TAG, "state" + mAdvertisingState);
